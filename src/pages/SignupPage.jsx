@@ -2,25 +2,73 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/Capture.PNG";
-const LoginPage = () => {
+const SignUpPage = () => {
   return (
     <div className="bg-white py-6 sm:py-8 lg:py-12">
-      <div className="max-w-screen-2xl px-4 md:px-8 -mt-12 mx-auto">
-        <img src={logo} style={{ position: "relative", top: "3" + "em" }} />
-        <form className="max-w-lg rounded-lg mx-auto">
+      <div className="max-w-screen-2xl px-4 md:px-8 -mt-16 mx-auto">
+        <img src={logo} style={{ position: "relative", top: "4" + "em" }} />
+        <form
+          className="max-w-lg rounded-lg mx-auto"
+          style={{ position: "relative", top: "3" + "em" }}
+        >
           <div className="flex flex-col gap-4 p-4 md:p-8">
             <div>
               <label
-                for="email"
+                for="Nom"
                 className="inline-block flex flex-start text-gray-800 text-sm sm:text-base mb-2"
+                style={{ fontWeight: "bold" }}
+              >
+                Nom et Prenom
+              </label>
+              <input
+                name="Nom"
+                className="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2"
+                placeholder="Habiba Gaizi"
+              />
+            </div>
+
+            <div>
+              <label
+                for="Email"
+                className="inline-block text-gray-800 flex flex-start text-sm sm:text-base mb-2"
                 style={{ fontWeight: "bold" }}
               >
                 Email
               </label>
               <input
-                name="email"
+                name="Email"
                 className="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2"
-                placeholder="example@name.com"
+                placeholder="hiba.gaizi@gmail.com"
+              />
+            </div>
+
+            <div>
+              <label
+                for="Telephone"
+                className="inline-block text-gray-800 flex flex-start text-sm sm:text-base mb-2"
+                style={{ fontWeight: "bold" }}
+              >
+                Telephone
+              </label>
+              <input
+                name="Telephone"
+                className="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2"
+                placeholder="0672********"
+              />
+            </div>
+
+            <div>
+              <label
+                for="Ville"
+                className="inline-block text-gray-800 flex flex-start text-sm sm:text-base mb-2"
+                style={{ fontWeight: "bold" }}
+              >
+                Ville
+              </label>
+              <input
+                name="Ville"
+                className="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2"
+                placeholder="Rabat"
               />
             </div>
 
@@ -30,7 +78,7 @@ const LoginPage = () => {
                 className="inline-block text-gray-800 flex flex-start text-sm sm:text-base mb-2"
                 style={{ fontWeight: "bold" }}
               >
-                Password
+                Mot de passe
               </label>
               <input
                 name="password"
@@ -40,7 +88,7 @@ const LoginPage = () => {
             </div>
 
             <Link
-              to="/home"
+              to="/sendmail"
               className="block bg-blue-600 hover:bg-blue-700 active:bg-blue-600 focus-visible:ring ring-blue-300 text-white text-sm md:text-base font-semibold text-center outline-none transition duration-100 px-8 py-3"
               style={{
                 borderRadius: "120" + "px",
@@ -50,7 +98,7 @@ const LoginPage = () => {
                 alignItems: "center",
               }}
             >
-              Connexion
+              S'inscrire
             </Link>
 
             <Link
@@ -69,10 +117,7 @@ const LoginPage = () => {
               Retour a l'acceuil
             </Link>
 
-            <div
-              className="flex justify-center items-center relative"
-              style={{ top: "8" + "em" }}
-            >
+            <div className="flex justify-center items-center relative">
               <span className="h-px bg-gray-300 absolute inset-x-0"></span>
               <span
                 className="bg-white text-gray-900 text-sm relative px-4"
@@ -83,12 +128,7 @@ const LoginPage = () => {
             </div>
             <div
               className="socialMediaContainer"
-              style={{
-                display: "flex",
-                width: "100%",
-                position: "relative",
-                top: "8" + "em",
-              }}
+              style={{ display: "flex", width: "100%" }}
             >
               <button
                 className="flex justify-center items-center bg-blue-500 hover:bg-blue-600 active:bg-blue-700 focus-visible:ring ring-blue-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 gap-2 px-8 py-3 ml-2"
@@ -157,4 +197,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default SignUpPage;
