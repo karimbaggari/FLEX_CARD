@@ -11,6 +11,7 @@ import Ewallet from "./Ewallet";
 import ProfilePage from "./ProfilePage";
 import Subscription from "./SubscriptionPage";
 import VerificationCode from "./VerificationCode";
+import ErrorMessage from "./ErrorMessage";
 import TramSubPage1 from "../pages/subscriptions/tram/TramSubPage1";
 export {
   LandingPage,
@@ -27,4 +28,5 @@ export {
   VerificationCode,
   ProfilePage,
   Ewallet,
+  ErrorMessage
 };
